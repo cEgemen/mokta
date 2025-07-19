@@ -1,7 +1,5 @@
 import {
-  FlatList,
   Image,
-  ImageSourcePropType,
   Pressable,
   StyleSheet,
   Text,
@@ -9,7 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 import * as Constands from "../../../../consts";
-import { basketIcon, clockIcon, fireIcon } from "../../../../assets";
+import { basketIcon, clockIcon } from "../../../../assets";
 import { router } from "expo-router";
 
 type RecoCardProps = {
@@ -27,12 +25,12 @@ type DetailData = {
 const RecoCard = ({ title, img, time, itemSize }: RecoCardProps) => {
 
   const DETAIL_DATA: DetailData[] = [
-    { icon: clockIcon, value: time + " min" },
+    { icon: clockIcon, value: time },
     { icon: basketIcon, value: "X " + itemSize },
   ];
 
   const goMealDetail = () => {
-        router.push("/")  
+        router.push("/food/detail")  
   }
 
   return (

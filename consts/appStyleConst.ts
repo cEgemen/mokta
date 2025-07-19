@@ -69,3 +69,18 @@ export const TYPOGRAPHY = {
 
 } as const;
 
+
+export const DETAIL_ITEM_COLOR =  
+[
+    "#4ECDC4",
+    "#FFD700",
+    "#32CD32",
+    "#FF6B6B",
+    "#FF1493",
+    "#00BFFF",
+    "#FF8C00",
+    "#FF00FF",
+    "#9932CC",
+    "#DC143C"
+]
+

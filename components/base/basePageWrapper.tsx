@@ -3,7 +3,7 @@ import React, {ReactNode}from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 type BasePageWrapperProps = {
-    children: React.ReactNode,
+    children?: React.ReactNode ,
     contentStyle?:object
 }
 

@@ -1,8 +1,8 @@
-import { Button, FlatList, Image, StyleSheet,Text,View } from 'react-native';
+import {FlatList, Image, StyleSheet,Text,View } from 'react-native';
 import { BasePageWrapper } from '../components';
 import * as Constands from '../consts';
-import { generateRandomKey } from '../utils';
 import RecoCard from '../components/pages/food/home/RecoCard';
+import { MOCHA_APP_DATA } from '../consts';
 
 export default function App() {
 
@@ -28,12 +28,12 @@ export default function App() {
            <Text style={Constands.TYPOGRAPHY.contentTitle}>{RECOMMENDED}</Text>
            <FlatList 
              data={[1,2,3,4,5,6,7,8,9,10]}
-             keyExtractor={(index) => generateRandomKey()}
+             keyExtractor={(index) => index.toString()}
              horizontal
              showsHorizontalScrollIndicator={false}
              contentContainerStyle={{columnGap: Constands.SPACING.sm}}
              renderItem={({item}) => (
-                  <RecoCard time='12' img='https://picsum.photos/200' itemSize={6} title='dadsd'/>
+                  <RecoCard time={MOCHA_APP_DATA.recipe.total_time} img='https://picsum.photos/200' itemSize={MOCHA_APP_DATA.recipe.ingredients.length} title={MOCHA_APP_DATA.recipe.name}/>
              )}
            />
           </View>
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     header:{
        width:"100%",
        columnGap:Constands.SPACING.sm,
-       minHeight:64,
+       minHeight:60,
        flexDirection:"row",
        alignItems:"center",
        justifyContent:"space-between",
