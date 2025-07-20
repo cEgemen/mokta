@@ -1,19 +1,20 @@
 
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import * as Constands from "../../consts"
 
 type SquareIconButtonProps = {
     icon : number,
     wrapperStyle?:object,
-    iconStyle?:object
+    iconStyle?:object,
+    onClick : () => void
 }
 
-const SquareIconButton = ({icon,wrapperStyle,iconStyle} : SquareIconButtonProps) => {
+const SquareIconButton = ({icon,wrapperStyle,iconStyle,onClick} : SquareIconButtonProps) => {
   return (
-    <View style={[styles.iconWrapper,wrapperStyle]}>
+    <Pressable style={[styles.iconWrapper,wrapperStyle]} onPress={onClick} >
        <Image source={icon} style={[styles.icon,iconStyle]} />
-    </View>
+    </Pressable>
   )
 }
 
@@ -21,8 +22,8 @@ export default SquareIconButton
 
 const styles = StyleSheet.create({
     iconWrapper : {
-        width:50,
-        height:50,
+        width:40,
+        height:40,
         backgroundColor:"white",
         justifyContent:"center",
         alignItems:"center",
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
         borderRadius:Constands.BORDER_RADIUS.md
     },
     icon : {
-      width:30,
-      height:30,
+      width:25,
+      height:25,
     }
 })

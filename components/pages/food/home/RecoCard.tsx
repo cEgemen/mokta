@@ -22,7 +22,7 @@ type DetailData = {
   value: string | number | undefined;
 };
 
-const RecoCard = ({ title, img, time, itemSize }: RecoCardProps) => {
+const RecoCard = ({ title,img, time, itemSize }: RecoCardProps) => {
 
   const DETAIL_DATA: DetailData[] = [
     { icon: clockIcon, value: time },
@@ -43,9 +43,9 @@ const RecoCard = ({ title, img, time, itemSize }: RecoCardProps) => {
         <View style={{ flex: 1 }}>
           <View style={styles.cardTitleContentWrapper}>
             <Text
-              numberOfLines={5}
-              style={{ ...Constands.TYPOGRAPHY.detailTitle }}
-            >
+              numberOfLines={4}
+              style={{ ...Constands.TYPOGRAPHY.detailTitle}}
+            > 
               {title}
             </Text>
           </View>

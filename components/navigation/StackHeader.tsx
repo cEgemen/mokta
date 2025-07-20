@@ -17,30 +17,28 @@ type StackHeaderProps = {
 }
 
 const StackHeader = ({isBack,backIconWrapperStyle,backIconStyle,LeftTemplate,CenterTemplate,RightTemplate,wrapperStyle}:StackHeaderProps) => {
+  
   const [canBack , setCanBack] = useState(false)
+
   useEffect(() => {
   
-     const backAction = ()  => {
-         if(router.canGoBack()){
+     const canBack = ()  => {
+         if(router.canGoBack()) {
             setCanBack(oldState => true)
          }
-         return false
       }
 
-     const backHandler = BackHandler.addEventListener("hardwareBackPress",backAction)
-
-     return () => {
-        backHandler.remove()
-     }
+      canBack() 
 
   },[])
 
-  console.log("isBack : ",isBack," --- canBack : ",canBack)
-  
+  const goBack = () => {
+    router.back()
+                       }
   return (
 
     <View style={[styles.headerWrapper,wrapperStyle]}>
-       {(isBack) ? <SquareIconButton icon={leftArrowIcon} wrapperStyle={backIconWrapperStyle} iconStyle={backIconStyle} /> : LeftTemplate || <View style={styles.emptyView}></View>}
+       {(isBack && canBack) ? <SquareIconButton icon={leftArrowIcon} wrapperStyle={backIconWrapperStyle} iconStyle={backIconStyle} onClick={goBack} /> : LeftTemplate || <View style={styles.emptyView}></View>}
        {CenterTemplate || <View style={styles.emptyView}></View>}
        {RightTemplate || <View style={styles.emptyView}></View>}
     </View>
@@ -60,8 +58,8 @@ const styles = StyleSheet.create({
         columnGap:Constands.SPACING.sm
     },
     emptyView:{
-        width:50,
-        height:50,
+        width:40,
+        height:40,
         backgroundColor:"transparent"
     }
 })

@@ -18,16 +18,18 @@ const MealDetail = () => {
   ];
 
   useEffect(() => {
-     setInterval(() => {
-       console.log("activeDetail : ",activeDetail)
-       if(activeDetail === TOP_SIDE_DETAIL_DATA.length - 1)
-         {
-            setActiveDetail(oldState => 0)
-         }
-       else{
-          setActiveDetail(oldState => oldState + 1)
-       }  
-     },3000)
+   
+        const interval = setInterval(() => {
+             setActiveDetail(oldState => {
+                 if(oldState + 1 === TOP_SIDE_DETAIL_DATA.length)
+                 {
+                   return 0
+                 }
+                 return oldState + 1
+             })
+        }, 5000);
+
+        return () => clearInterval(interval);
   },[])
 
   return (
@@ -39,7 +41,7 @@ const MealDetail = () => {
          wrapperStyle={{paddingHorizontal:Constands.SPACING.md}} 
          backIconWrapperStyle={{backgroundColor:"lightgrey"}}
          CenterTemplate={<Text numberOfLines={1} style={[Constands.TYPOGRAPHY.heading,{flex:1,textAlign:"center"}]}>{MOCHA_APP_DATA.recipe.name}</Text>}
-         RightTemplate={<SquareIconButton icon={favIcon} wrapperStyle={{backgroundColor:"lightgrey"}} />}
+         RightTemplate={<SquareIconButton onClick={() => {}} icon={favIcon} wrapperStyle={{backgroundColor:"lightgrey"}} />}
          />
          <Image source={{uri:"https://picsum.photos/200"}} style={[styles.topSideImage,{top:(safeScreenHeight/4)-90,right:(safeScreenWidth/2)-90}]} />
          <View style={styles.topSideDetailWrapper}>

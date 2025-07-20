@@ -3,13 +3,14 @@ import { BasePageWrapper } from '../components';
 import * as Constands from '../consts';
 import RecoCard from '../components/pages/food/home/RecoCard';
 import { MOCHA_APP_DATA } from '../consts';
+import { GenerateRandomKey} from '../utils';
 
 export default function App() {
 
   const HEADER_TITLE = "SEARCH";
   const HEADER_SUBTITLLE = "for recipes";
   const RECOMMENDED = "Recommended";
-
+ 
   return (
      
      <BasePageWrapper contentStyle={{paddingHorizontal: Constands.SPACING.md}}>
@@ -28,7 +29,7 @@ export default function App() {
            <Text style={Constands.TYPOGRAPHY.contentTitle}>{RECOMMENDED}</Text>
            <FlatList 
              data={[1,2,3,4,5,6,7,8,9,10]}
-             keyExtractor={(index) => index.toString()}
+             keyExtractor={(index) => GenerateRandomKey.generateKey()}
              horizontal
              showsHorizontalScrollIndicator={false}
              contentContainerStyle={{columnGap: Constands.SPACING.sm}}

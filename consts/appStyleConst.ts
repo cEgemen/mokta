@@ -47,19 +47,19 @@ export const TYPOGRAPHY = {
         fontWeight: FONT_WEIGHTS.semibold,
     },
     subheading: {
-        fontSize: FONT_SIZES['2xl'],
-        fontWeight: FONT_WEIGHTS.medium,
+        fontSize: FONT_SIZES.xl,
+        fontWeight: FONT_WEIGHTS.normal,
     },
     contentTitle: {
-        fontSize: FONT_SIZES.lg,
-        fontWeight: FONT_WEIGHTS.medium,
+        fontSize: FONT_SIZES.xl,
+        fontWeight: FONT_WEIGHTS.semibold,
     },
     contentText: {
         fontSize: FONT_SIZES.md,
         fontWeight: FONT_WEIGHTS.normal,
     },
     detailTitle: {
-        fontSize: FONT_SIZES.md,
+        fontSize: FONT_SIZES.lg,
         fontWeight: FONT_WEIGHTS.semibold,
     },
     detailText: {
@@ -72,8 +72,8 @@ export const TYPOGRAPHY = {
 
 export const DETAIL_ITEM_COLOR =  
 [
-    "#4ECDC4",
-    "#FFD700",
+    "#4e9ccdff",
+    "#f6d725ff",
     "#32CD32",
     "#FF6B6B",
     "#FF1493",

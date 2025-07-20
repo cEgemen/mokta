@@ -1,5 +1,5 @@
 
-import { generateRandomKey } from "./generateRandomKey";
+import { GenerateRandomKey } from "./generateRandomKey";
 
 
-export { generateRandomKey };
+export { GenerateRandomKey };
