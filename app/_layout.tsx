@@ -12,6 +12,8 @@ const AppLayout = () => {
     <Stack>
        <Stack.Screen name='index' options={inVisibleHeader} />  
        <Stack.Screen name='food/detail' options={inVisibleHeader} />
+       <Stack.Screen name='food/cook' options={inVisibleHeader} />  
+       <Stack.Screen name='food/nutrition' options={inVisibleHeader} />
     </Stack>
      
   )

@@ -26,6 +26,7 @@ import {
 import useSafeScreenSizes from "../../hooks/safeScreenSizes";
 import { MOCHA_APP_DATA } from "../../consts";
 import { GenerateRandomKey } from "../../utils";
+import { router } from "expo-router";
 
 type TopSideDetailITEMData = {
   icon: number;
@@ -59,8 +60,8 @@ const MealDetail = () => {
   ];
 
   const BUTTON_DATA: BUTTON_DATA = [
-    { icon: chartIcon, label: "Nutrition", onClick: () => {} },
-    { icon: chefIcon, label: "Let's Cook", onClick: () => {} },
+    { icon: chartIcon, label: "Nutrition", onClick: () => router.push("/food/nutrition") },
+    { icon: chefIcon, label: "Let's Cook", onClick: () => router.push("/food/cook") },
   ];
 
   const BOTTOM_SIDE_TITLE = "Ingredients";
@@ -79,7 +80,8 @@ const MealDetail = () => {
   }, []);
 
   return (
-    <BasePageWrapper>
+
+      <BasePageWrapper>
       <>
         <View style={styles.topSide}>
           <StackHeader
@@ -178,7 +180,7 @@ const MealDetail = () => {
           })}
         </View>
       </>
-    </BasePageWrapper>
+    </BasePageWrapper> 
   );
 };
 

@@ -6,7 +6,7 @@ import IngredientCard from "./pages/food/IngredientCard";
 
 export {
     
-    BasePageWrapper,StackHeader,SquareIconButton,
+    StackHeader,SquareIconButton,BasePageWrapper,
     IconButton,IngredientCard,
  
        }

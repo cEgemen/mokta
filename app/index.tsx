@@ -13,7 +13,7 @@ export default function App() {
  
   return (
      
-     <BasePageWrapper contentStyle={{paddingHorizontal: Constands.SPACING.md}}>
+     <BasePageWrapper contentStyle={{paddingHorizontal:Constands.SPACING.md}} >
         <>
           <View style={styles.header}>
              <View style={styles.headerTextContainer}>

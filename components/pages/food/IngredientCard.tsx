@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     height: 64,
     flexDirection: "row",
     alignItems: "center",
-    columnGap: Constands.SPACING.xl,
+    columnGap: Constands.SPACING.md,
     paddingHorizontal: Constands.SPACING.md,
     borderRadius: Constands.BORDER_RADIUS.lg,
     backgroundColor: "white",
