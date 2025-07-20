@@ -18,22 +18,22 @@ export const MOCHA_APP_DATA = {
       {
         name: "Spaghetti",
         amount: "400",
-        unit: "g"
+        unit: "grams"
       },
       {
         name: "Guanciale or pancetta",
         amount: "150",
-        unit: "g"
+        unit: "grams"
       },
       {
         name: "Egg yolks",
         amount: "4",
-        unit: "pcs"
+        unit: "pieces"
       },
       {
         name: "Pecorino Romano cheese (grated)",
         amount: "80",
-        unit: "g"
+        unit: "grams"
       },
       {
         name: "Salt",
@@ -43,7 +43,7 @@ export const MOCHA_APP_DATA = {
       {
         name: "Fresh black pepper",
         amount: "1",
-        unit: "tsp"
+        unit: "teaspoon"
       }
     ],
     steps: [

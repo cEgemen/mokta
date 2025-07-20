@@ -6,5 +6,11 @@ import youtubeIcon from "./icons/youtube.png";
 import clockIcon from "./icons/clock.png";
 import leftArrowIcon from "./icons/leftArrow.png"
 import rightArrowIcon from "./icons/rightArrow.png"
+import chartIcon from "./icons/chart.png"
+import chefIcon from "./icons/chef.png"
 
-export {  basketIcon,fireIcon,favIcon,fillFavIcon,youtubeIcon,clockIcon,leftArrowIcon,rightArrowIcon };
+export { 
+         basketIcon,fireIcon,favIcon,fillFavIcon,
+         youtubeIcon,clockIcon,leftArrowIcon,rightArrowIcon,
+         chartIcon,chefIcon 
+       };
