@@ -8,9 +8,11 @@ import leftArrowIcon from "./icons/leftArrow.png"
 import rightArrowIcon from "./icons/rightArrow.png"
 import chartIcon from "./icons/chart.png"
 import chefIcon from "./icons/chef.png"
+import pauseIcon from "./icons/pause.png"
+import playIcon from  "./icons/play.png"
 
 export { 
          basketIcon,fireIcon,favIcon,fillFavIcon,
          youtubeIcon,clockIcon,leftArrowIcon,rightArrowIcon,
-         chartIcon,chefIcon 
+         chartIcon,chefIcon , pauseIcon, playIcon
        };
